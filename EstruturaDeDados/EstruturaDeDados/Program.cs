@@ -15,27 +15,27 @@
         //Imprimir os itens da lista
         frutas.ForEach(Console.WriteLine); //Resolução correta
 
+        //Impressão da lista em uma única linhas
+        //Como estávamos fazendo:
         //Console.WriteLine("Minha lista de frutas:");
         //foreach (string fruta in frutas)
         //{
         //    Console.WriteLine(fruta);
         //}
 
-
-
-        //Impressão da lista em uma única linhas
         //Minha resolução 1:
         //foreach (var arg in args)
         //{
         //    Console.WriteLine("Minha lista de frutas:\n" + string.Join("\n", frutas));
+
         //Minha resolução 2:
         //void ImprimirLista(List<string> frutas)
         //{
         //    Console.WriteLine("Minha lista de frutas:\n" + string.Join("\n", frutas));
         //}
-        //frutas.ForEach(Console.WriteLine); //Resolução correta
 
-
+        //Resolução correta
+        //frutas.ForEach(Console.WriteLine);
 
         Console.WriteLine(); //Pular a linha
 
@@ -49,11 +49,6 @@
 
         ////Imprimindo a lista novamente
         frutas.ForEach(Console.WriteLine); //Resolução correta
-        //Console.WriteLine("Minha lista de frutas:");
-        //foreach (string fruta in frutas)
-        //{
-        //    Console.WriteLine(fruta);
-        //}
 
         //Alterar um elemento no índice específico
         frutas[4] = "Pêra";
@@ -62,11 +57,6 @@
 
         //Imprimindo a lista novamente
         frutas.ForEach(Console.WriteLine); //Resolução correta
-        //Console.WriteLine("Minha lista de frutas:");
-        //foreach (string fruta in frutas)
-        //{
-        //    Console.WriteLine(fruta);
-        //}
 
         //Removendo elemento da lista no índice específico
         frutas.RemoveAt(3);
@@ -78,11 +68,6 @@
 
         //Imprimindo a lista novamente
         frutas.ForEach(Console.WriteLine); //Resolução correta
-        //Console.WriteLine("Minha lista de frutas:");
-        //foreach (string fruta in frutas)
-        //{
-        //    Console.WriteLine(fruta);
-        //}
 
         //Apagar todos os elementos da lista
         frutas.Clear();
@@ -91,13 +76,24 @@
         frutas.ForEach(Console.WriteLine); //Resolução correta
 
         Console.WriteLine(); //Pular a linha
+        Console.WriteLine("========================================");
+        Console.WriteLine(); //Pular a linha
 
 
-        //Imprimindo a lista novamente
-        //Console.WriteLine("Minha lista de frutas:");
-        //foreach (string fruta in frutas)
-        //{
-        //    Console.WriteLine(fruta);
-        //}
+        //TRABALHANDO COM DICIONÁRIO (DICTIONARY)
+        //Criando um dicionário de dados
+        Dictionary<int, string> carros = new Dictionary<int, string>();
+
+        //Adicionar dados a um dicionário
+        carros.Add(5, "Corsa");
+        carros.Add(10, "Fusca");
+        carros.Add(2, "Ford Ka");
+
+        Console.WriteLine("Meu dicionário de carros: ");
+        //Imprimir um dicionário de dados
+        foreach (var carro in carros)
+        {
+            Console.WriteLine($"{carro.Key} - {carro.Value}");
+        }
     }
 }
