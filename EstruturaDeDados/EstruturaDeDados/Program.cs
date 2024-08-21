@@ -95,5 +95,79 @@
         {
             Console.WriteLine($"{carro.Key} - {carro.Value}");
         }
+        Console.WriteLine(); //Pular a linha
+        Console.WriteLine("========================================");
+        Console.WriteLine(); //Pular a linha
+
+
+        //TRABALHANDO COM FILA
+        //Criar uma fila (queue)
+        Queue<string> filaBanco = new Queue<string>();
+
+        //Adicionar elementos em uma fila
+        filaBanco.Enqueue("André"); //enqueue = enfileirar
+        filaBanco.Enqueue("João");
+        filaBanco.Enqueue("Maria");
+        filaBanco.Enqueue("Bia");
+
+        foreach (var pessoa in filaBanco) //foreach = imprimir na ordem pelo laço
+        {
+            Console.WriteLine(pessoa);
+        }
+
+        Console.WriteLine(); //Pular a linha
+        Console.WriteLine("========================================");
+        Console.WriteLine(); //Pular a linha
+
+        //Retirar o primeiro elemento de uma fila
+        filaBanco.Dequeue();
+
+        foreach (var pessoa in filaBanco) //foreach = imprimir na ordem pelo laço
+        {
+            Console.WriteLine(pessoa);
+        }
+
+        //Verificar se existe um elemento na fila
+        bool achou = filaBanco.Contains("Bia");
+
+        if (achou) //'achou' dentro no if => achou == true
+        {
+            Console.WriteLine("A pessoa está na fila!");
+        }
+        else
+        {
+            Console.WriteLine("A pessoa não está na fila!");
+        }
+
+        Console.WriteLine(); //Pular a linha
+        Console.WriteLine("========================================");
+        Console.WriteLine(); //Pular a linha
+
+
+        //TRABALHANDO COM PILHA (STACK)
+        //Criando uma pilha
+        Stack<string> livros = new Stack<string>();
+
+        //Adicionar elementos em uma pilha
+        livros.Push("Chapeuzinho Vermelho");
+        livros.Push("Branca de Neve");
+        livros.Push("Princesa e o Sapo");
+
+        foreach (var livro in livros)
+        {
+            Console.WriteLine(livro);
+        }
+
+        Console.WriteLine(); //Pular a linha
+        Console.WriteLine("========================================");
+        Console.WriteLine(); //Pular a linha
+
+        //Remove o primeiro elemento da pilha (debaixo)
+        livros.Pop();
+        foreach (var livro in livros)
+        {
+            Console.WriteLine(livro);
+        }
+
     }
 }
